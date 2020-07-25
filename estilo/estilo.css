@@ -22,6 +22,8 @@ nav{
     align-content: center;
     background-color: white;
     padding: 0;
+    margin: 0;
+    min-height: 45px;
 }
 
 .menu li a{
