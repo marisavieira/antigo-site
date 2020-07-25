@@ -33,7 +33,8 @@ body, html{
 }
 
 #fotoqmsoueu{
-    width: 250pt;
+    width: 230pt;
+    min-width: 35vh;
     border-radius: 50%;
     border: 8px solid #9d99f7;
     padding: 5px;
