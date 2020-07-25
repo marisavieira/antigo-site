@@ -5,10 +5,13 @@
     padding: 0;
 }
 
-nav{
+nav, #texto, footer{
     font-family: Nunito,sans-serif;
+}
+
+nav{
     width: 100%;
-    max-height: 100vh;
+    height: 100vh;
     background-color: #e0ebe8;
 }
 
@@ -34,7 +37,7 @@ nav{
     color: #77777e;
 }
 
-.menu li a:hover{
+.menu li a:hover, #selecionado{
     text-decoration: none;
     color: #9d99f7;
 }
@@ -46,9 +49,11 @@ nav img{
 }
 
 #selecionado{
-    text-decoration: none;
-    color: #9d99f7;
     border-bottom: 1px solid black;
+}
+
+.resumo{
+    padding: 30px 0 25px 0;
 }
 
 #titulo{
@@ -80,23 +85,37 @@ nav img{
     width: 110vh;
     line-height: 1.6;
     color: #77777e;
-    font-family: Nunito,sans-serif;
     font-size: 22px;
     padding: 25px;
     text-align: justify;
 }
 
-.footer{
+footer{
     background-color: #9d99f7;
-    font-family: Nunito,sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
-    padding: 15px;
+    padding: 25px;
+}
+
+#redes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #redes img{
     height: 30px;
+    margin: 0 10px 0 10px;
+}
+
+#redes a{
+    text-decoration: none;
+    margin: 0 10px 0 10px;
+}
+
+footer p{
+    margin-top: 15px;
 }
