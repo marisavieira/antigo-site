@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Nunito:wght@200&display=swap');
+
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+    font-family: 'Bebas Neue', cursive;
+}
+
+.menu ul{
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+}
+
+#titulo{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 35px;
+    color: #9d99f7;
+    text-align: center;
+}
+
+.reparticao{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding: 15px;
+}
+
+#fotoqmsoueu{
+    width: 50vh;
+    border-radius: 50%;
+    border: 8px solid #9d99f7;
+    padding: 5px;
+}
+
+#texto{
+    width: 110vh;
+    line-height: 1.6;
+    color: #77777e;
+    font-family: Nunito,sans-serif;
+    font-size: 22px;
+    padding: 25px;
+    text-align: justify;
+}
