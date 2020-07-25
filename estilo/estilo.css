@@ -8,7 +8,7 @@
 nav{
     font-family: Nunito,sans-serif;
     width: 100%;
-    height: 100vh;
+    max-height: 100vh;
     background-color: #e0ebe8;
 }
 
