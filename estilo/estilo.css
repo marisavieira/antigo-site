@@ -97,18 +97,20 @@ footer{
     justify-content: center;
     align-items: center;
     align-content: center;
-    padding: 25px;
 }
 
 #redes{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 #redes img{
     height: 30px;
-    margin: 0 10px 0 10px;
+    margin: 25px 10px 0 10px;
 }
 
 #redes a{
@@ -117,5 +119,5 @@ footer{
 }
 
 footer p{
-    margin-top: 15px;
+    margin: 15px 0;
 }
