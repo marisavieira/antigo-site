@@ -6,27 +6,120 @@
     <title> Marisa Vieira </title>
 
     <link href="estilo/estilo.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="imagem/png" href="imagens/icon_barra.png" />
+    <script language="javascript" type="text/javascript" src="js/js.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
     <nav>
         <ul class="menu">
             <li> <a id="selecionado"> Início </a> </li>
-            <li> <a href="#"> Trabalhos </a> </li>
+            <li> <a href="#"> Portfólio </a> </li>
             <li> <a href="#"> Fotografias </a> </li>
-            <li> <a href="#"> + Mais </a> </li>
         </ul>
-        <img src="imagens/teste.png">
+        <img id="art" src="imagens/marisa.png">
+        <p> Marisa Vieira </p>
+        <img id="fundo" src="imagens/fundo_header.png">
     </nav>
 
-    <section class="resumo">
+    <script>
+        AOS.init();
+    </script>
+    <section class="resumo" data-aos="fade-up" data-aos-duration="3000">
         <p id="titulo"> SOBRE MIM </p>
         <div class="reparticao">
             <div id="circulo">
-                <img id="fotoqmsoueu" src="imagens/QuemSouEu.jpg">
+                <img data-aos="flip-left" data-aos-duration="2000" id="fotoqmsoueu" src="imagens/QuemSouEu.jpg">
             </div>
             
-            <p id="texto"> Olá! Meu nome é Marisa e estou cursando o último ano do curso de Bacharel em Ciência da Computação. Sou apaixonada por web, onde consigo colocar toda minha criatividade em prática. Aqui será meu cantinho onde você poderá conhecer mais sobre mim e sobre meus trabalhos. Espero que goste! </p>            
+            <p id="apresentacao"> Olá! Meu nome é Marisa e estou cursando o último ano do curso de Bacharel em Ciência da Computação. Sou apaixonada por tudo que permite colocar minha criatividade em prática. Aqui será meu cantinho onde você poderá conhecer mais sobre mim e sobre meus trabalhos. Espero que goste! </p>            
         </div>        
+    </section>
+
+   <section class="conhecimento" data-aos="fade-up" data-aos-duration="3000">
+        <p id="titulo"> CONHECIMENTO </p>
+        <div class="skills">
+            <div class="topico">
+              <div class="nome-topico">HTML e CSS</div>
+              <div class="topico-barra">
+                <div class="topico-porcentagem" per="90"></div>
+              </div>
+            </div>
+      
+            <div class="topico">
+              <div class="nome-topico">Javascript</div>
+              <div class="topico-barra">
+                <div class="topico-porcentagem" per="70"></div>
+              </div>
+            </div>
+      
+            <div class="topico">
+              <div class="nome-topico">Boostrap</div>
+              <div class="topico-barra">
+                <div class="topico-porcentagem" per="95"></div>
+              </div>
+            </div>
+      
+            <div class="topico">
+              <div class="nome-topico">Jquery</div>
+              <div class="topico-barra">
+                <div class="topico-porcentagem" per="70"></div>
+              </div>
+            </div>
+      
+            <div class="topico">
+              <div class="nome-topico">Adobe Photoshop</div>
+              <div class="topico-barra">
+                <div class="topico-porcentagem" per="80"></div>
+              </div>
+            </div>
+      
+            <div class="topico">
+              <div class="nome-topico">CorelDRAW</div>
+              <div class="topico-barra">
+                <div class="topico-porcentagem" per="85"></div>
+              </div>
+            </div>
+      
+            <div class="topico">
+              <div class="nome-topico">Adobe XD</div>
+              <div class="topico-barra">
+                <div class="topico-porcentagem" per="60"></div>
+              </div>
+            </div>
+          </div>
+      
+          <script>
+             var executou = false;
+            $(window).scroll(function() {
+                if (!executou && $(window).scrollTop() > $('.conhecimento').offset().top/2) {
+                    $('.topico-porcentagem').each(function(){
+                        var $this = $(this);
+                        var porc = $this.attr('per');
+                        $this.css("width",porc+'%');
+                        $({animatedValue: 0}).animate({animatedValue: porc},{
+                            duration: 1000,
+                            step: function(){
+                                $this.attr('porc', Math.floor(this.animatedValue) + '%');
+                            },
+                            complete: function(){
+                                $this.attr('porc', Math.floor(this.animatedValue) + '%');
+                            }
+                        });
+                    });
+                    executou = true;
+                }
+            });             
+          </script>              
+    </section>
+
+    <section class="contato" data-aos="fade-up" data-aos-duration="3000">
+        <p id="titulo"> POSSO AJUDAR? </p>           
+        <p id="texto" style="padding: 40px 20px 30px 20px;"> Atualmente, estou disponível para trabalho freelance. </p>   
+        <p id="texto" style="padding: 0 20px 30px 20px;"> Se você tem uma ideia que deseja iniciar, precisa da minha ajuda com algo ou simplesmente deseja me dizer um olá, entre em contato. </p> 
+        <a class="botao" href="mailto:marisavrst@gmail.com" target="_blank"> Me mande uma mensagem  </a>     
     </section>
 
     <footer>

@@ -3,85 +3,115 @@
 *, body, html{
     margin: 0;
     padding: 0;
-}
-
-nav, #texto, footer{
     font-family: Nunito,sans-serif;
 }
 
+.menu, .reparticao, .contato, footer, #redes{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+/* ---------------- */
+/* CSS PARA O MENU */
+/* -------------- */
 nav{
     width: 100%;
     height: 100vh;
     background-color: #e0ebe8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 .menu{
     list-style-type: none;
     position: fixed;
     width: 100vw;
-    display: flex;
+    background-color: #e0ebe8;
+    min-height: 45px;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-    background-color: #e0ebe8;
-    padding: 0;
-    margin: 0;
-    min-height: 45px;
     z-index: 1;
 }
-
 .menu li a{
     text-decoration: none;
     color: #77777e;
 }
-
 .menu li a:hover, #selecionado{
     text-decoration: none;
     color: #9d99f7;
 }
-
+#art{
+    position: absolute;
+    width: 45vh;
+    top: 100px;
+}
 nav img{
     position: absolute;
     bottom: 0;
     width: 100%;
 }
-
 #selecionado{
     border-bottom: 1px solid black;
 }
 
-.resumo{
-    padding: 30px 0 25px 0;
+/* ------------------ */
+/* CSS PARA O FOOTER */
+/* ---------------- */
+footer{
+    background-color: #e0ebe8;
+    flex-direction: column;
+}
+#redes{
+    flex-direction: row;
+    justify-content: center;
+}
+#redes img{
+    height: 30px;
+    margin: 25px 10px 0 10px;
+}
+#redes a{
+    text-decoration: none;
+    margin: 0 10px 0 10px;
+}
+footer p{
+    margin: 15px 0;
 }
 
+
+/* ----------------------------------------------------- */
+/* ------------------- CSS DO INDEX ------------------- */
+/* --------------------------------------------------- */
+
+
+/* ------------------- */
+/* CSS PARA SOBRE MIM */
+/* ----------------- */
+.resumo{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 #titulo{
     font-family: 'Fjalla One', sans-serif;
     font-size: 35px;
     color: #9d99f7;
     text-align: center;
 }
-
 .reparticao{
-    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
-    align-content: center;
     padding: 15px;
 }
-
 #fotoqmsoueu{
     width: 230pt;
-    min-width: 35vh;
     border-radius: 50%;
     border: 8px solid #9d99f7;
     padding: 5px;
 }
-
-#texto{
+#apresentacao{
     width: 110vh;
     line-height: 1.6;
     color: #77777e;
@@ -89,35 +119,103 @@ nav img{
     padding: 25px;
     text-align: justify;
 }
-
-footer{
-    background-color: #9d99f7;
+/* ----------------------- */
+/* CSS PARA O QUE EU FAÇO */
+/* --------------------- */
+.conhecimento{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    align-content: center;
-}
-
-#redes{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    align-content: center;
+    background-color: rgba(223, 230, 233, 0.2);
+    min-height: 100vh;
+    padding: 40px 0 50px 0;
 }
-
-#redes img{
-    height: 30px;
-    margin: 25px 10px 0 10px;
+/* ---------------------- */
+/* CSS PARA POSSO AJUDAR */
+/* -------------------- */
+.contato{
+    width: 100%;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
 }
-
-#redes a{
+#texto{
+    line-height: 1.6;
+    color: #77777e;
+    font-size: 22px;
+    padding: 5px;
+    text-align: center;
+    max-width: 570px;
+}
+.botao{
+    background-color: #9d99f7;
     text-decoration: none;
-    margin: 0 10px 0 10px;
+    color: black;
+    font-size: 20px;
+    padding: 15px;
+    margin: 15px 0 20px 0;
 }
 
-footer p{
-    margin: 15px 0;
-}
+
+
+/* ----------------------------------------------------- */
+/* ------------------- CSS DO CONHECIMENTO ------------------- */
+/* --------------------------------------------------- */
+
+
+/* ------------------- */
+/* CSS BARRA CONHECIMENTO */
+/* ----------------- */
+.skills{
+    width: 100%;
+    max-width: 50vw;
+    padding: 0 20px;
+  }
+  
+  .nome-topico{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+  
+  .topico-barra{
+    height: 20px;
+    background: #cacaca;
+    border-radius: 8px;
+  }
+  
+  .topico-porcentagem{
+    height: 20px;
+    background-color: #9d99f7;
+    border-radius: 8px;
+    width: 0;
+    transition: 1s linear;
+    position: relative;
+  }
+  
+  .topico-porcentagem::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+  }
+  
+  .topico-porcentagem::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    top: -16px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+  }
